@@ -11,3 +11,7 @@ end
 get '/palindrome' do
     erb :palindrome
 end
+
+get '/hangman' do
+    erb :hangman
+end
