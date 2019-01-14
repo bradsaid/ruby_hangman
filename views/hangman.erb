@@ -1,50 +1,21 @@
-<!doctype html>
-<html lang="en">
+<link rel="stylesheet" type="text/css" href="/stylesheets/hangman.css">
+           
+<img src="/images/pjlogo.png" alt="Pearl Jam Hangman Game" />
+<img src="/images/hangman.png"/>
+            
+<div class="col-md-6" style="padding:10px";> 
+    <img id="win-image" src="/images/win.png" alt="Win!" />
+    <img id="lose-image" src="/images/lose.png" alt="Lose!" />
+    <img id="stickmanImage" src="" alt="" />
+    <h4 id="tryAgain">Game Over, Press Any Letter to Try Again!</h4>
+</div>   
+    
+<div class="col-md-6" style="padding:10px";>
+    <h3>Make A Guess:  Press Any Letter</h3>
+    <h4 id="totalWins"></h4>
+    <h4>Guess The Song Name:</h4>
+    <h3 id="currentWord"></h3>
+    <h3 id="guessesRemaining"></h3>
+    <h3 id="guessedLets"></h3>
+</div>
 
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-        <title>Hangman</title>
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">        
-        <link rel="stylesheet" type="text/css" href="/stylesheets/hangman.css">
-
-    </head>
-
-<body>
-        <div class="container">
-        <div class="row">
-                <div class=".col-md-3 .col-md-offset-3">
-                     <img class="img-fluid" id="title-image1" src="/images/pjlogo.png" alt="Pearl Jam Hangman Game" />
-                </div> 
-                <div class=".col-md-3 .col-md-offset-3">
-                    <img class="img-fluid" id="title-image" src="/images/hangman.png" alt="Pearl Jam Hangman Game" />
-                </div>
-                
-                
-        </div>
-        <div class="row">
-            <div class="col-md-6" style="padding:10px";>
-                <img id="win-image" src="/images/win.png" alt="Win!" />
-                <img id="lose-image" src="/images/lose.png" alt="Lose!" />
-                <img id="stickmanImage" src="" alt="" />
-                <h4 id="tryAgain">Game Over, Press Any Letter to Try Again!</h4>
-            </div>
-            <div class="col-md-6" style="padding:10px";>
-                <h3>Make A Guess:  Press Any Letter</h3>
-                <h4 id="totalWins"></h4>
-                <h4>Guess The Song Name:</h4>
-                <h3 id="currentWord"></h3>
-                <h3 id="guessesRemaining"></h3>
-                <h3 id="guessedLets"></h3>
-            </div>
-        </div>
-    </div>
-    <script>
-        resetGame();
-        updateDisplay();
-    </script>
-
-
-</body>
-
-</html>
