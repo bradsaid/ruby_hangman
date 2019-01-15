@@ -39,9 +39,9 @@ end
 post '/guess' do
   @letter = params[:letter]
   $guessedLetters.push(@letter)
-  if $randomWord.include? @letter   
-    $guess = $randomWord.index(@letter)  # now need to swap the _ with the @letter
-    $wordDashes[$guess] = @letter
+  if $randomWord.include? @letter         # checking to see if the guessed letter is part of the string. 
+    $guess = $randomWord.index(@letter)   # set guess to the index of the 1st occurance of the letter
+    $wordDashes[$guess] = @letter         # swap the _ for the letter
     else
     $guess = "no"
   end

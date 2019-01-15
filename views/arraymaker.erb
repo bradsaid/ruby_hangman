@@ -1,8 +1,14 @@
-<h1>Array Maker</h1>
+<h1>Add Words To Guess</h1>
 <p><a href="/hangman">Play Hangman</a></p>
 
+<p>1) Add a word and hit "Add A Word". Add words one at a time.<p>
+<p>2) Select "Pick a Word" to pick a random word from the list. This will be the word to guess.<p>
+<p>3) Click "Play Hangman" to get started!</p>
+<p>If you want to remove the words, click "Empty Array"</p>
+
+
 <form id="array_maker" action="/submit" method="post">
-  <textarea name="phrase" rows="10" cols="60"></textarea>
+  <textarea name="phrase" rows="5" cols="60"></textarea>
   <br>
   <button class="form-submit" type="submit">Add A Word</button>
 </form>
@@ -15,6 +21,6 @@
   <button class="form-submit" type="submit" action="/clear" method="post" >Empty Array</button>
 </form>
 
-<p><%= $testArray %></p>
+<p>Word List: <%= $testArray.join(', ') %></p>
 <p><%= $randomWord %></p>
 
