@@ -15,3 +15,9 @@ end
 get '/hangman' do
     erb :hangman
 end
+
+
+post '/check' do
+  @phrase = params[:phrase]
+  erb :result
+end
