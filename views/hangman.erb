@@ -1,25 +1,29 @@
 <!--link rel="stylesheet" type="text/css" href="/stylesheets/hangman.css">          
 <img src="/images/pjlogo.png" alt="Pearl Jam Hangman Game" />
-<img src="/images/hangman.png"/-->
+<img src="/images/hangman.png">
             
 <div class="col-md-6" style="padding:10px";> 
-    <img id="win-image" src="/images/win.png" alt="Win!" />
-    <img id="lose-image" src="/images/lose.png" alt="Lose!" />
     <img id="stickmanImage" src="" alt="" />
     <h4 id="tryAgain">Game Over, Press Any Letter to Try Again!</h4>
-</div>   
+</div-->   
+
+<p>HANGMAN</p>
+
+<form id="array_maker" action="/guess" method="post">
+  <textarea name="letter" rows="2" cols="5"></textarea>
+  <br>
+  <button class="form-submit" type="submit">Guess A Letter</button>
+</form>
     
 <div class="col-md-6" style="padding:10px";>
-    <h3>Make A Guess:  Press Any Letter</h3>
     <h4 id="totalWins"></h4>
-    <h4>Guess The Song Name:</h4>
+    <h4>Guess The Word: <%= $wordDashes.join(' ') %></h4>
     <h3 id="currentWord"></h3>
     <h3 id="guessesRemaining"></h3>
     <h3 id="guessedLets"></h3>
 </div>
 
-<p><%= $randomWord %></p>
+<p>Guessed Letters: <%= $guessedLetters %></p>
 
-<p><%= $wordDashes %></p>
-
+<p><a href="/array">Add Words</a></p>
 
