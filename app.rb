@@ -43,15 +43,10 @@ post '/guess' do
   $guessedLetters.push(@letter)
   if $randomWord.include? @letter         # checking to see if the guessed letter is part of the string. 
     x = (0 ... $randomWord.length).find_all { |i| $randomWord[i,1] == @letter}  # find all indexes of the letter
-    $test = x
-    $guess = $randomWord.index(@letter)   # set guess to the index of the 1st occurance of the letter
-    $wordDashes[$guess] = @letter         # swap the _ for the letter
-    else
+    x.each { |i| $wordDashes[i] = @letter }
+  else
       $guess = "no"
   end
-
-
-
   erb :hangman
 end
 
